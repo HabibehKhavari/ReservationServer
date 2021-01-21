@@ -72,7 +72,7 @@ app.get("/attendees/DELETE/:id", (req, resp) => {
                 "Content-Type": "text/json",
                 "Access-Control-Allow-Origin": "*",
             });
-            resp.write(JSON.stringify(req.params.id));
+            resp.write(JSON.stringify("Attendee"+req.params.id));
             resp.end();
         })
         .catch((error) => {
