@@ -122,7 +122,7 @@ app.post("/attendees",(req, resp) => {
         }) 
 });
 
-function insertFromAPIEndpoint(req, resp) { 
+function updateFromAPIEndpoint(req, resp) { 
 
     console.log("In /attendeess PUT using the POST (workaround)");
 
@@ -156,8 +156,8 @@ function insertFromAPIEndpoint(req, resp) {
             resp.end();
         });
     }
-    app.post("/attendees/PUT/", insertFromAPIEndpoint);
-    app.put("attendees", insertFromAPIEndpoint);
+    app.post("/attendees/PUT/", updateFromAPIEndpoint);
+    app.put("attendees", updateFromAPIEndpoint);
 
 
 app.get("/attendees", (req, resp) => {
